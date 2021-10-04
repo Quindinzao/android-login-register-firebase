@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".FormRegister">
+
+        <TextView
+            android:id="@+id/registerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:layout_marginTop="96dp"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/containerComponents"
+            style="@style/ContainerComponents"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerTitle" />
+
+        <EditText
+            android:id="@+id/editName"
+            style="@style/Edit_Text"
+            android:hint="Name"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="#808080"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintTop_toTopOf="@+id/containerComponents" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            style="@style/Edit_Text"
+            android:hint="E-mail"
+            android:drawableRight="@drawable/ic_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="#808080"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            style="@style/Edit_Text"
+            android:hint="Password"
+            android:drawableRight="@drawable/ic_eye"
+            android:inputType="numberPassword"
+            android:textColor="@color/black"
+            android:textColorHint="#808080"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSignOut"
+            style="@style/Button"
+            android:layout_marginTop="32dp"
+            android:text="@string/sign_up"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/containerComponents" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".ProfileScreen">
+
+        <View
+            android:id="@+id/userContainer"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/container_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_person_pin"
+            app:layout_constraintEnd_toEndOf="@id/userContainer"
+            app:layout_constraintStart_toStartOf="@id/userContainer"
+            app:layout_constraintTop_toTopOf="@id/userContainer"
+            app:layout_constraintBottom_toBottomOf="@id/userContainer"/>
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/ic_person_pin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userContainer"/>
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/userIcon"
+            app:layout_constraintStart_toEndOf="@id/userIcon"
+            app:layout_constraintTop_toTopOf="@+id/userIcon" />
+
+        <ImageView
+            android:id="@+id/userIconEmail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/ic_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userIcon"/>
+
+        <TextView
+            android:id="@+id/userEmailTex"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/userIconEmail"
+            app:layout_constraintStart_toEndOf="@id/userIconEmail"
+            app:layout_constraintTop_toTopOf="@+id/userIconEmail" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSignOut"
+            style="@style/Button"
+            android:layout_marginTop="48dp"
+            android:background="@color/black"
+            android:text="@string/gou_out"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userEmailTex" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
